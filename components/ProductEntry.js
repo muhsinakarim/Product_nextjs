@@ -1,7 +1,11 @@
 import { useState } from "react";
 import SubmitButton from "./SubmitButton";
+import Link from 'next/link';
+import { FaWindows } from "react-icons/fa";
+import { useRouter } from "next/router";
 
 export default function ProductEntry(){
+    const route=useRouter()
     const [value,setValue]=useState({
         productName:"",
         productDescription:"",
@@ -11,7 +15,7 @@ export default function ProductEntry(){
     const submitHandler=async (event)=>{
         event.preventDefault()
 
-        const response=fetch("http://localhost:3000/product",{
+        const response= await fetch("http://localhost:3000/product",{
         method:"POST",
         headers:{
             "Content-type":"application/json"
@@ -22,8 +26,8 @@ export default function ProductEntry(){
             productPrice:value.productPrice 
         })
         })
+        route.reload(window.location.pathname)
     }
-
 
 
     const productNameHandler=(event)=>{
@@ -38,7 +42,7 @@ export default function ProductEntry(){
         setValue({...value,productPrice:event.target.value});
     }
     return(
-        <div className="h-5/6 bg-yellow-300 p-10 rounded-lg py-10 my-5">
+        <div className="h-5/6 bg-yellow-300 p-10 rounded-lg">
             <h1 className="font-bold text-2xl text-center ">Enter new product</h1>
             <br></br>
             <br></br>
