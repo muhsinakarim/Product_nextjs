@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState ,FunctionComponent} from "react";
+import { ProductType } from "../../types/ProductType";
 
-const ProductDetails = (props) =>{
-    const [details,setDetails]=useState()
-    const[isLoading,setIsLoading]=useState(false)
+
+const ProductDetails:FunctionComponent<ProductType> = () =>{
+    const [details,setDetails]=useState<Array<ProductType>>()
+    const[isLoading,setIsLoading]=useState<boolean>(false)
     useEffect(()=>{
         setIsLoading(true)
         const send = async()=>{
@@ -17,20 +19,19 @@ const ProductDetails = (props) =>{
 
     return(
         <div>
-            {!isLoading && details && details.map((element)=>{
+            {!isLoading && details && details.map((element:ProductType)=>{
                 return (
-                    <div className="relative mx-16  p-5 bg-white rounded-md box-border flex-col mb-5">
+                    <div className="relative w-[90%] mx-auto p-5 bg-white rounded-md box-border flex-col mb-5 mx-20 w-full">
                     <h2 className="mb-2 text-black font-bold font-xl">Product No: {element.prodId}</h2>
                     <p className="mb-2 font-normal text-gray">Product Name: {element.productName}</p>
                     <p className="mb-2  font-normal text-gray">Product Description: {element.productDescription}</p>
                     <p className="mb-3 font-normal text-gray">Product Price: {element.productPrice}</p> 
+                    <a href="#" className="absolute bottom-2 right-2 inline-flex items-center py-2 px-3 text-sm font-medium text-center bg-yellow-300 rounded-md p-5">✏️</a> 
                     </div>
                 )
             })}
          
-            {/* <a href="#" className="absolute bottom-2 right-2 inline-flex items-center py-2 px-3 text-sm font-medium text-center bg-yellow-300 rounded-md p-5">
-            ✏️
-            </a> */}
+          
         </div>
     );
 }

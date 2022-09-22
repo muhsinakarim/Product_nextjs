@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`index page tests should render the UI correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="flex flex-col min-h-screen  bg-gray-700"
+  >
+    <div
+      class="bg-yellow-300 h-[10%]  p-5  md:p-5 "
+    >
+      <span
+        class="text-white font-bold text-xl  md:text-gray-700 "
+      >
+         
+        <a
+          href="http://localhost:3002/"
+        >
+          Bunchofcoconutcomics
+        </a>
+      </span>
+      <span />
+    </div>
+    <br />
+    <br />
+    <div>
+      <div
+        class="w-[90%] xl:mx-20 xl:my-12 sm:mx-20 sm:my-12  mx-auto md:items-center md:mx-20 md:my-12 "
+      >
+        <form
+          action="/add-product-here"
+          method="post"
+        >
+          <div
+            class=" bg-yellow-300 rounded-lg w-full p-10"
+          >
+            <h1
+              class="font-bold text-2xl text-center "
+            >
+              Enter new product
+            </h1>
+            <br />
+            <br />
+            <div
+              class="flex flex-col items-center"
+            >
+              <div
+                class="flex items-center  mr-5"
+              >
+                <label
+                  class=" font-semibold "
+                  for="productName"
+                >
+                  Product Name : 
+                </label>
+                <input
+                  class="rounded "
+                  id="productName"
+                  name="productName"
+                  required=""
+                  type="text"
+                />
+              </div>
+              <br />
+              <div
+                class="flex items-center mr-5"
+              >
+                <label
+                  class="font-semibold "
+                  for="productDescription"
+                >
+                  Description : 
+                </label>
+                <input
+                  class="rounded text-black  "
+                  id="productDescription"
+                  name="productDescription"
+                  required=""
+                  type="text"
+                />
+              </div>
+              <br />
+              <div
+                class="flex items-center mr-5"
+              >
+                <label
+                  class="font-semibold "
+                  for="productPrice"
+                >
+                  Price : 
+                </label>
+                <input
+                  class="rounded "
+                  id="productPrice"
+                  name="productPrice"
+                  required=""
+                  type="text"
+                />
+              </div>
+              <br />
+              <div
+                class="flex gap-2"
+              >
+                <button
+                  class="bg-gray-700 p-2 rounded font-bold text-yellow-300"
+                  type="submit"
+                >
+                  Submit
+                </button>
+                <button
+                  class="bg-gray-700 p-2 rounded font-bold text-yellow-300"
+                  type="button"
+                >
+                  <a
+                    href="/DetailsPage"
+                  >
+                    Product details
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div
+        class="fixed w-full bottom-[0%]"
+      >
+        <footer
+          class="p-4  bg-yellow-300 w-full bottom-[0%]  shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800"
+        >
+          <span
+            class="text-sm text-gray-700 sm:text-center dark:text-gray-400"
+          >
+            © 2022 
+            <a
+              class="hover:underline"
+              href="http://localhost:3002/"
+            >
+              Bunchofcoconutcomics™
+            </a>
+            . All Rights Reserved.
+          </span>
+          <ul
+            class="flex flex-wrap items-center mt-3 text-sm text-gray-700 dark:text-gray-400 sm:mt-0"
+          >
+            <li>
+              <a
+                class="mr-4 hover:underline md:mr-6 "
+                href="#"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                class="mr-4 hover:underline md:mr-6"
+                href="#"
+              >
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a
+                class="mr-4 hover:underline md:mr-6"
+                href="#"
+              >
+                Licensing
+              </a>
+            </li>
+            <li>
+              <a
+                class="hover:underline"
+                href="#"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
